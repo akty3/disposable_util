@@ -155,6 +155,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "jp.akty.disposable_util": {
+      "version": "file:DisposableUtil",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
