@@ -7,6 +7,15 @@ namespace DisposableUtil
     {
         private Action action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call()
@@ -23,6 +32,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
@@ -44,6 +54,15 @@ namespace DisposableUtil
     {
         private Action<T1> action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call(T1 t1)
@@ -60,6 +79,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
@@ -81,6 +101,15 @@ namespace DisposableUtil
     {
         private Action<T1, T2> action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call(T1 t1, T2 t2)
@@ -97,6 +126,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
@@ -118,6 +148,15 @@ namespace DisposableUtil
     {
         private Action<T1, T2, T3> action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call(T1 t1, T2 t2, T3 t3)
@@ -134,6 +173,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
@@ -155,6 +195,15 @@ namespace DisposableUtil
     {
         private Action<T1, T2, T3, T4> action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call(T1 t1, T2 t2, T3 t3, T4 t4)
@@ -171,6 +220,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
@@ -192,6 +242,15 @@ namespace DisposableUtil
     {
         private Action<T1, T2, T3, T4, T5> action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5)
@@ -208,6 +267,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
@@ -229,6 +289,15 @@ namespace DisposableUtil
     {
         private Action<T1, T2, T3, T4, T5, T6> action;
 
+        private Action onDispose;
+        public Action OnDispose
+        {
+            set
+            {
+                onDispose += value;
+            }
+        }
+
         public bool IsDisposed { get; private set; }
 
         public bool Call(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6)
@@ -245,6 +314,7 @@ namespace DisposableUtil
 
         public void Dispose()
         {
+            onDispose.Call();
             IsDisposed = true;
             action = null;
         }
